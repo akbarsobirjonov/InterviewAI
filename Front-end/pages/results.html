@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Results — InterviewAI</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Results Page CSS -->
+    <link rel="stylesheet" href="../css/results.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a class="logo" data-link="home">InterviewAI</a>
+        <ul class="nav-links">
+            <li><a data-link="home">Home</a></li>
+            <li><a data-link="professions">Professions</a></li>
+            <li><a data-link="about">About</a></li>
+        </ul>
+    </nav>
+
+    <!-- RESULTS HEADER -->
+    <section class="results-header">
+        <h1>Your Interview Results</h1>
+        <p id="professionResult">Profession: <span id="professionName">Data Analyst</span></p>
+    </section>
+
+    <!-- SCORE SUMMARY -->
+    <section class="score-summary">
+        <h2>Score Summary</h2>
+        <p>Your average score is <span id="averageScore">0/10</span></p>
+    </section>
+
+    <!-- SKILL RATINGS -->
+    <section class="skill-ratings">
+        <h2>Skill Ratings</h2>
+        <ul id="skillRatings">
+            <!-- Model will generate skill ratings here -->
+        </ul>
+    </section>
+
+    <!-- STRENGTHS -->
+    <section class="strengths">
+        <h2>Strengths</h2>
+        <ul id="strengthsList">
+            <!-- Model will generate strengths here -->
+        </ul>
+    </section>
+
+    <!-- WEAK POINTS -->
+    <section class="weak-points">
+        <h2>Weak Points</h2>
+        <ul id="weakPointsList">
+            <!-- Model will generate weak points here -->
+        </ul>
+    </section>
+
+    <!-- RECOMMENDATIONS -->
+    <section class="recommendations">
+        <h2>Recommendations</h2>
+        <ol id="recommendationsList">
+            <!-- Model will generate recommendations here -->
+        </ol>
+    </section>
+
+    <!-- ACTION BUTTONS -->
+    <section class="results-actions">
+        <button id="tryAgainBtn">Try Again</button>
+        <button id="backHomeBtn">Back to Home</button>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>InterviewAI © 2025</p>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="../js/script.js"></script>
+    <script src="../js/results.js" defer></script>
+    <script src="../js/navbar.js"></script>
+
+</body>
+</html>

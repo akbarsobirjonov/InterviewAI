@@ -1,0 +1,408 @@
+/* ---------------------------
+    GLOBAL SETTINGS (Перенесено из style.css)
+--------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #000000;
+    color: #FFFFFF;
+    overflow-x: hidden;
+    opacity: 0;
+    transition: opacity 0.9s ease;
+}
+
+body.page-loaded {
+    opacity: 1; /* Конечное состояние анимации загрузки */
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px; /* Глобальный max-width */
+    margin: auto;
+}
+
+/* Accent glow background (center radial blue) */
+body::before {
+    content: "";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 800px;
+    height: 800px;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle, #2B7FFF30 0%, transparent 70%);
+    filter: blur(80px);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* ---------------------------
+    NAVBAR (Перенесено из style.css)
+--------------------------- */
+
+nav {
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background: #000000;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: inherit;
+    font-weight: 700;
+    background: linear-gradient(to right, #3b82f6, #8b5cf6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor:pointer;
+}
+
+
+nav ul {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: oklch(.705 .015 286.067);
+    font-size: inherit;
+    font-weight: inherit;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    opacity: 0.7;
+    color: #2B7FFF;
+}
+
+/* ---------------------------
+    АНИМАЦИЯ FADE-IN ПРИ ПРОКРУТКЕ
+--------------------------- */
+
+/* Начальное состояние: скрыто и сдвинуто вниз */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    /* Задаем transition для плавного эффекта, когда добавится класс visible */
+    transition: opacity 0.8s ease, transform 0.8s ease; 
+}
+
+/* Конечное состояние: полностью видно и на своем месте */
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ---------------------------
+    PROFESSIONS PAGE STYLES (Ваши уникальные стили для страницы)
+--------------------------- */
+
+/* Общий акцентный фон (фиолетово-синий градиент) */
+.professions-page {
+    /* Градиент, который вы хотели использовать */
+    background: linear-gradient(to bottom, #000000, #18181B, #000000);
+    min-height: calc(100vh - 80px);
+    padding: 3rem 0 4rem;
+    position: relative; /* Важно для professions-glow */
+    overflow: hidden; /* Чтобы свечение не выходило за границы секции */
+}
+
+/* Локальное свечение, как на главной странице (home-glow) */
+.professions-glow {
+    content: "";
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    transform: translate(-50%, -40%);
+    background: #6e2bff; /* Фиолетовый */
+    filter: blur(90px);
+    opacity: 0.45;
+    border-radius: 50%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Контейнер страницы (переопределение глобального контейнера) */
+.professions-page .container {
+    max-width: 1280px; /* Переопределяем 1200px для этого контента */
+    margin: 0 auto;
+    padding: 0 2rem;
+    position: relative; /* Важно, чтобы контент был выше свечения */
+    z-index: 1;
+}
+
+/* Page Header */
+.text-center {
+    text-align: center;
+}
+
+.mb-12 {
+    margin-bottom: 3rem;
+}
+
+.page-title {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.page-subtitle {
+    color: #9ca3af;
+    font-size: inherit;
+    font-weight: inherit;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Professions Grid */
+.professions-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+    .professions-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .professions-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Profession Card */
+.profession-card {
+    background: rgba(31, 41, 55, 0.5);
+    border: 1px solid #374151;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.profession-card:hover {
+    border-color: #6366f1;
+    transform: translateY(-2px);
+}
+
+/* Card Header */
+.profession-card .header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.icon-container {
+    width: 3rem;
+    height: 3rem;
+    background: rgba(55, 65, 81, 0.5);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.profession-card:hover .icon-container {
+    transform: scale(1.1);
+}
+
+.icon-container i {
+    font-size: 1.5rem;
+}
+
+
+.profession-card h3 {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* Skills List */
+.skills-list {
+    flex: 1;
+}
+
+.skills-title {
+    color: #9ca3af;
+    font-size: 0.875rem;
+    margin-bottom: 0.75rem;
+}
+
+.skills-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.skills-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+    color: #d1d5db;
+    font-size: 0.9375rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.5;
+}
+
+.bullet {
+    color: #818cf8; /* Indigo */
+    margin-top: 0.125rem;
+    flex-shrink: 0;
+}
+
+/* Start Button */
+.start-btn-link {
+    text-decoration: none;
+    display: block;
+    margin-top: 1.5rem;
+}
+
+.start-btn-card {
+    width: 100%;
+    background: rgba(99, 102, 241, 0.2);
+    color: #a5b4fc;
+    border: none;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.start-btn-card:hover {
+    background: #6366f1;
+    color: #ffffff;
+}
+
+/* --- ЦВЕТА КАРТОЧЕК И ИКОНОК --- */
+
+/* Frontend Developer */
+.icon-color-frontend {
+    color: #f59e0b; /* Amber/Yellow */
+}
+.soft-dev-card .icon-container {
+    background: rgba(245, 158, 11, 0.1); /* Amber/Yellow light background */
+}
+
+/* Backend Developer */
+.icon-color-backend {
+    color: #14b8a6; /* Teal */
+}
+.backend-dev-card .icon-container {
+    background: rgba(20, 184, 166, 0.1); /* Teal light background */
+}
+
+/* UI/UX Designer */
+.designer-icon {
+    color: #f472b6; /* Pink */
+}
+.designer-card .icon-container {
+    background: rgba(244, 114, 182, 0.1);
+}
+
+/* Product Manager */
+.icon-color-product {
+    color: #eab308; /* Yellow/Lime */
+}
+.product-manager-card .icon-container {
+    background: rgba(234, 179, 8, 0.1);
+}
+
+/* Marketing Manager */
+.icon-color-marketing {
+    color: #ef4444; /* Red */
+}
+.marketing-manager-card .icon-container {
+    background: rgba(239, 68, 68, 0.1);
+}
+
+/* Data Scientist (Data Analyst) */
+.icon-color-data-sci, .analyst-icon {
+    color: #34d399; /* Emerald/Green */
+}
+.data-scientist-card .icon-container {
+    background: rgba(52, 211, 153, 0.1);
+}
+
+
+/* Footer (скорректирован для соответствия стилю) */
+.footer {
+    border-top: 1px solid rgba(255, 255, 255, 0.08); /* Используем стиль с главной */
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 80px;
+    color: #9ca3af; /* Цвет текста с главной */
+    opacity: 0.7;
+    font-size: 14px;
+}
+/* Удален лишний background: rgba(17, 24, 39, 0.8); из Footer */
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    /* Добавлены стили Navbar для мобильных устройств */
+    nav {
+        justify-content: space-between;
+        padding: 20px;
+    }
+    nav ul {
+        gap: 16px;
+    }
+    
+    .professions-page {
+        padding: 2rem 0 3rem;
+    }
+
+    .page-title {
+        font-size: 16px;
+        font-weight: 700;
+    }
+
+    .page-subtitle {
+        font-size: inherit;
+        font-weight: inherit;
+    }
+
+    .profession-card {
+        padding: 1.25rem;
+    }
+}
+@media (max-width: 480px) {
+    .professions-grid {
+        grid-template-columns: 1fr;
+    }
+}

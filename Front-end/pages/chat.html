@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat — InterviewAI</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Chat Page CSS -->
+    <link rel="stylesheet" href="../css/chat.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a class="logo" data-link="home">InterviewAI</a>
+        <ul class="nav-links">
+            <li><a data-link="home">Home</a></li>
+            <li><a data-link="professions" class="active">Professions</a></li>
+            <li><a data-link="about">About</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- CHAT HEADER -->
+    <section class="chat-header">
+        <h1 id="professionHeader">Chat</h1>
+        <p>Practice your AI-powered interview</p>
+    </section>
+
+    <!-- CHAT WINDOW -->
+    <section class="chat-window-container">
+        <div class="chat-window" id="chatWindow">
+            <!-- Messages will appear here -->
+        </div>
+        <div class="chat-input-container">
+            <input type="text" id="userInput" placeholder="Type your answer..." />
+            <button id="sendBtn">Send</button>
+        </div>
+    </section>
+
+            <!-- Interview Complete Section -->
+    <section>
+        <div id="interviewComplete" class="interview-complete hidden">
+            <h2>Interview Complete! 🎉</h2>
+            <p>You've answered all the questions. Click below to view your detailed results and feedback.</p>
+
+            <button id="seeResultsBtn" class="see-results-btn">
+                See My Results
+            </button>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>InterviewAI © 2025</p>
+        </div>
+
+    <!-- JS -->
+    <script src="../js/script.js"></script>
+    <script src="../js/chat.js" defer></script>
+    <script src="../js/navbar.js"></script>
+</body>
+</html>

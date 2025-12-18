@@ -1,0 +1,11 @@
+
+  # Chatbot Interview Prep UI
+
+  This is a code bundle for Chatbot Interview Prep UI. The original project is available at https://www.figma.com/design/UBS4FzxzUThsVHXgVbnH60/Chatbot-Interview-Prep-UI.
+
+  ## Running the code
+
+  Run `npm i` to install the dependencies.
+
+  Run `npm run dev` to start the development server.
+  

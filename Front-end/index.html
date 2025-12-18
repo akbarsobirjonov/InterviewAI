@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InterviewAI</title>
+    <meta name="description" content="Practice job interviews with InterviewAI, an AI-powered interview simulator that provides realistic questions, feedback, and tips." />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+        <a class="logo" data-link="home">InterviewAI</a>
+        <ul class="nav-links">
+            <li><a data-link="home">Home</a></li>
+            <li><a data-link="professions">Professions</a></li>
+            <li><a data-link="about">About</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+        <div class="container hero-content">
+            <h1><i class="ri-robot-2-line"></i> Your AI Interview Partner</h1>
+            <p>Prepare for real interviews using simple, text-based simulations.</p>
+            <button class="start-btn" id="startInterviewBtn">Start Interview</button>
+        </div>
+        <div class="home-glow"></div>
+    </section>
+
+    <!-- FEATURES -->
+
+    <section class="features">
+        <div class="container features-grid">
+
+            <div class="feature-box">
+                <div class="round">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide" aria-hidden="true"><path d="M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z"></path></svg>
+                </div>
+                <h3>Realistic Simulation</h3>
+                <p>Answer 5–7 profession-based questions in a real interview style.</p>
+            </div>
+
+            <div class="feature-box">
+                <div class="circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide-target" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle>
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <circle cx="12" cy="12" r="6"></circle>
+                    <circle cx="12" cy="12" r="2"></circle>
+                    </svg>
+                </div>
+                <h3>Skill Feedback</h3>
+                <p>Receive structured evaluation of your communication and clarity.</p>
+            </div>
+
+            <div class="feature-box">
+                <div class="square">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="lucide" aria-hidden="true"><path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M12 2a7 7 0 0 0-7 7c0 3.866 3.134 7 7 7s7-3.134 7-7a7 7 0 0 0-7-7z"></path><line x1="12" x2="12" y1="9" y2="13"></line></svg>
+                </div>
+                <h3>Personal Tips</h3>
+                <p>Get suggestions to improve before your real interview.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- INTERVIEW SECTION -->
+     
+    <section class="interview" id="interviewSection" style="display: none;">
+        <div class="container">
+
+            <!-- Dropdown to select profession -->
+            <div class="profession-select">
+                <label for="profession">Choose a profession:</label>
+                <select id="profession">
+                    <option value="software">Software Engineer</option>
+                    <option value="designer">UI/UX Designer</option>
+                    <option value="analyst">Data Analyst</option>
+                </select>
+            </div>
+
+            <!-- Chat Window -->
+            <div class="chat-box" id="chatBox">
+                <!-- Messages appear here -->
+            </div>
+
+            <!-- User Input -->
+            <div class="chat-input">
+                <input type="text" id="userInput" placeholder="Type your answer..." />
+                <button id="sendBtn">Send</button>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- RESULTS SECTION -->
+
+    <section class="results" id="resultsSection" style="display: none;">
+        <div class="container results-box">
+            <h2>Your Interview Results</h2>
+
+            <div id="scoreBox">
+                <!-- Dynamic scoring text -->
+            </div>
+
+            <div id="strengthsBox">
+                <!-- Strengths list -->
+            </div>
+
+            <div id="weaknessesBox">
+                <!-- Weaknesses list -->
+            </div>
+
+            <div id="recommendationsBox">
+                <!-- Recommendations list -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>InterviewAI © 2025</p>
+        </div>
+    </footer>
+
+    <!-- JS -->
+    <script src="./js/script.js"></script>
+    <script src="./js/home.js"></script>
+    <script src="./js/navbar.js"></script>
+
+</body>
+</html>
+
