@@ -22,12 +22,12 @@
       AI: Google Gemini Flash
       Dependencies: CORS, dotenv, @google/generative-ai
 
-    💼 Supported Professions
-      ProfessionKey SkillsFrontend DeveloperHTML/CSS/JS, React/Vue, REST APIsBackend DeveloperNode.js/Python, Databases, APIsUI/UX DesignerFigma, User Research, PrototypingProduct ManagerStrategy, Agile, RoadmapsMarketing ManagerDigital Marketing, SEO, AnalyticsData ScientistPython/R, ML, Statistics
-
     🎓 Educational Project
-      This project demonstrates practical application of AI integration, full-stack development, and user experience design.
+      This project demonstrates practical application of AI integration, 
+      full-stack development, and user experience design.
 
     ⚠️ Disclaimer
-    SuhbatAI is an educational tool to supplement interview preparation. It should not replace real human practice, professional coaching, or networking. Use it as one part of your comprehensive interview strategy.
+    InterviewAI is an educational tool to supplement interview preparation. 
+    It should not replace real human practice, professional coaching, or networking. 
+    Use it as one part of your comprehensive interview strategy.
 
