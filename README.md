@@ -30,4 +30,5 @@
     InterviewAI is an educational tool to supplement interview preparation. 
     It should not replace real human practice, professional coaching, or networking. 
     Use it as one part of your comprehensive interview strategy.
-
+    
+The link to UI/UX Design Click [here](https://www.figma.com/community/file/1578721640469800335).
